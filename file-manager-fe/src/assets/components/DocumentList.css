@@ -1,0 +1,16 @@
+.document-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.document-list th,
+.document-list td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.document-list th {
+  background-color: #f2f2f2;
+}

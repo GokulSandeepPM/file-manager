@@ -1,0 +1,16 @@
+.user-management-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-management-container th,
+.user-management-container td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.user-management-container th {
+  background-color: #f2f2f2;
+}

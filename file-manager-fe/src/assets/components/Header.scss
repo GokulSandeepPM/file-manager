@@ -1,0 +1,36 @@
+.header {
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .icon{
+    margin-right: 3px;
+  }
+
+  button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+  }
+}

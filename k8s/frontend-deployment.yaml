@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-manager-frontend
+  labels:
+    app: file-manager
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: file-manager
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: file-manager
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: your-docker-hub-username/file-manager-fe:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: file-manager-frontend
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080
+  selector:
+    app: file-manager
+    tier: frontend

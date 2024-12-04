@@ -1,0 +1,12 @@
+.file-upload {
+  margin: 20px 0;
+}
+
+.file-upload input {
+  margin-right: 10px;
+}
+
+.file-upload button {
+  background-color: #007bff;
+  color: white;
+}

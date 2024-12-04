@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-manager-backend
+  labels:
+    app: file-manager
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: file-manager
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: file-manager
+        tier: backend
+    spec:
+      containers:
+      - name: backend
+        image: your-docker-hub-username/file-manager-be:latest
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: file-manager-backend
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: file-manager
+    tier: backend

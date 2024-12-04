@@ -1,0 +1,15 @@
+.admin-panel-container {
+    padding: 20px;
+  }
+  
+  .admin-panel-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-panel-container table th,
+  .admin-panel-container table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
